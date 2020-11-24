@@ -1,0 +1,28 @@
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.recipe {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  text-align: center;
+  background-color: orange;
+  width: 200px;
+  height: 450px;
+}
+
+img {
+  grid-template-columns: 1fr, 1fr, 1fr;
+  display: grid;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+h1{
+    text-align: center;
+}
+
+#input-container{
+    text-align: center;
+}

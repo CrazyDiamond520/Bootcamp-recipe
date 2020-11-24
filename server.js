@@ -19,7 +19,7 @@ app.get('/recipes/:ingredient', function(req,res){
         const finalData = results.map((i) => {return{
             ingredients: i.ingredients,
             title: i.title,
-            thumpnail: i.thumbnail,
+            thumbnail: i.thumbnail,
             href: i.href
         }})
 

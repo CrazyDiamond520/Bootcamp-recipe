@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipes</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Welcome To recipes! :D</h1>
     <div id="input-container">
-        <input type="text" id="input" placeholder="enter ingredient"/>
-        <button id="findRecipes">Find recipes</button>
+      <input type="text" id="input" placeholder="enter ingredient" />
+      <button id="findRecipes">Find recipes</button>
     </div>
-    
-
-
+    <div id="mainContent"></div>
+    <script id="content" type="text/x-handlebars-template">
+      <div class="mainContent">
+           {{#each relevantData}}
+           <div class="recipe">
+               <a href="{{href}}">{{title}}</a>
+               <img src="{{thumbnail}}" alt="" class="image">
+               {{#each ingredients}}
+               <li class="ingredientList">{{this}}</li>
+               {{/each}}
+               {{/each}}
+            </div>
+      </div>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="jquery/dist/jquery.js"></script>
     <script src="renderer.js"></script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
